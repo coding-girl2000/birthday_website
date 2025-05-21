@@ -161,3 +161,48 @@ body {
 .nav-button:hover {
     background-color: #e63973;
 }
+
+@media (max-width: 768px) {
+  .container, .floating-box, .message-box, .surprise-box {
+    flex-direction: column !important;
+    padding: 20px;
+    width: 95% !important;
+    max-width: 100% !important;
+  }
+
+  .photo-section {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .photo {
+    max-width: 80vw !important;
+  }
+
+  .song-info .title {
+    font-size: 0.95em;
+  }
+
+  .song-info .artist {
+    font-size: 0.85em;
+  }
+
+  .song {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .progress-container {
+    font-size: 0.75em;
+  }
+
+  .nav-button, .back-btn, .surprise-btn {
+    width: 90%;
+    font-size: 0.95em;
+  }
+
+  .memory-photo {
+    width: 45vw;
+    height: auto;
+  }
+}
