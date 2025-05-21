@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Special Surprise</title>
+  <link rel="stylesheet" href="finalsurprise.css">
+</head>
+<body>
+
+  <!-- Confetti Background -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Page Content -->
+  <div class="page-wrapper">
+    <div class="container">
+
+      <!-- Left: Photo -->
+      <div class="photo-section">
+        <img src="us.jpg" alt="Photo of Us" class="photo">
+      </div>
+
+      <!-- Right: Playlist -->
+      <div class="surprise-box">
+        <h2>🎉 Your Special Surprise! 🎉</h2>
+        <h4>Songs That Remind Me of Us 💕</h4>
+
+        <div class="song-list">
+
+          <!-- SONG TEMPLATE: copy this block and change ids only -->
+          <div class="song">
+            <img src="song1.jpg" alt="Song Cover" class="song-cover">
+            <div class="song-info">
+              <div class="title">Naina</div>
+              <div class="artist">The song you dedicated me with</div>
+            </div>
+            <div class="play-btn" onclick="playSong('song1')" id="btn-song1">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+          <div class="progress-container hidden" id="progress-song1">
+            <div class="progress-bar" onclick="seek(event, 'song1')">
+              <div class="progress" id="bar-song1"></div>
+            </div>
+            <div class="time-display" id="time-song1">0:00 / 0:00</div>
+          </div>
+
+          <!-- SONG 2 -->
+          <div class="song">
+            <img src="song2.jpg" alt="Song Cover" class="song-cover">
+            <div class="song-info">
+              <div class="title">Chaand Baaliyan</div>
+              <div class="artist">The song I dedicated you</div>
+            </div>
+            <div class="play-btn" onclick="playSong('song2')" id="btn-song2">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+          <div class="progress-container hidden" id="progress-song2">
+            <div class="progress-bar" onclick="seek(event, 'song2')">
+              <div class="progress" id="bar-song2"></div>
+            </div>
+            <div class="time-display" id="time-song2">0:00 / 0:00</div>
+          </div>
+
+          <!-- SONG 3 -->
+          <div class="song">
+            <img src="song3.jpg" alt="Song Cover" class="song-cover">
+            <div class="song-info">
+              <div class="title">Tumse Mohabbat Hai</div>
+              <div class="artist">The song that holds all the unspoken feelings between us</div>
+            </div>
+            <div class="play-btn" onclick="playSong('song3')" id="btn-song3">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+          <div class="progress-container hidden" id="progress-song3">
+            <div class="progress-bar" onclick="seek(event, 'song3')">
+              <div class="progress" id="bar-song3"></div>
+            </div>
+            <div class="time-display" id="time-song3">0:00 / 0:00</div>
+          </div>
+
+          <!-- SONG 4 -->
+          <div class="song">
+            <img src="song4.jpg" alt="Song Cover" class="song-cover">
+            <div class="song-info">
+              <div class="title"> Pal Kaisa Pal</div>
+              <div class="artist">The song that captures how every fleeting moment with you feels eternal</div>
+            </div>
+            <div class="play-btn" onclick="playSong('song4')" id="btn-song4">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+          <div class="progress-container hidden" id="progress-song4">
+            <div class="progress-bar" onclick="seek(event, 'song4')">
+              <div class="progress" id="bar-song4"></div>
+            </div>
+            <div class="time-display" id="time-song4">0:00 / 0:00</div>
+          </div>
+
+          <!-- SONG 5 -->
+          <div class="song">
+            <img src="song5.jpg" alt="Song Cover" class="song-cover">
+            <div class="song-info">
+              <div class="title"> Man Mast Magan</div>
+              <div class="artist">The song that reflects how deeply lost I am in your love — where nothing else matters but you</div>
+            </div>
+            <div class="play-btn" onclick="playSong('song5')" id="btn-song5">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+          <div class="progress-container hidden" id="progress-song5">
+            <div class="progress-bar" onclick="seek(event, 'song5')">
+              <div class="progress" id="bar-song5"></div>
+            </div>
+            <div class="time-display" id="time-song5">0:00 / 0:00</div>
+          </div>
+
+          <!-- SONG 6 -->
+          <div class="song">
+            <img src="song6.jpg" alt="Song Cover" class="song-cover">
+            <div class="song-info">
+              <div class="title"> Baatein Karo</div>
+              <div class="artist">The song that reminds me how beautiful even the simplest conversations with you can be</div>
+            </div>
+            <div class="play-btn" onclick="playSong('song6')" id="btn-song6">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+          <div class="progress-container hidden" id="progress-song6">
+            <div class="progress-bar" onclick="seek(event, 'song6')">
+              <div class="progress" id="bar-song6"></div>
+            </div>
+            <div class="time-display" id="time-song6">0:00 / 0:00</div>
+          </div>
+
+          <!-- SONG 7 -->
+          <div class="song">
+            <img src="song7.jpg" alt="Song Cover" class="song-cover">
+            <div class="song-info">
+              <div class="title"> Yahin Hoon Main</div>
+              <div class="artist">The song that gently reminds us — no matter the distance or silence, my heart is always with you</div>
+            </div>
+            <div class="play-btn" onclick="playSong('song7')" id="btn-song7">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+          <div class="progress-container hidden" id="progress-song7">
+            <div class="progress-bar" onclick="seek(event, 'song7')">
+              <div class="progress" id="bar-song7"></div>
+            </div>
+            <div class="time-display" id="time-song7">0:00 / 0:00</div>
+          </div>
+
+          <!-- SONG 8 -->
+          <div class="song">
+            <img src="song8.jpg" alt="Song Cover" class="song-cover">
+            <div class="song-info">
+              <div class="title"> Pehli Dafa</div>
+              <div class="artist">The song that reminds me how everything felt new and magical the moment you entered my life</div>
+            </div>
+            <div class="play-btn" onclick="playSong('song8')" id="btn-song8">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+          <div class="progress-container hidden" id="progress-song8">
+            <div class="progress-bar" onclick="seek(event, 'song8')">
+              <div class="progress" id="bar-song8"></div>
+            </div>
+            <div class="time-display" id="time-song8">0:00 / 0:00</div>
+          </div>
+
+          <!-- SONG 9 -->
+          <div class="song">
+            <img src="song9.jpg" alt="Song Cover" class="song-cover">
+            <div class="song-info">
+              <div class="title"> Darmiyaan</div>
+              <div class="artist">The song that became my favorite the moment you sang it </div>
+            </div>
+            <div class="play-btn" onclick="playSong('song9')" id="btn-song9">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+          <div class="progress-container hidden" id="progress-song9">
+            <div class="progress-bar" onclick="seek(event, 'song9')">
+              <div class="progress" id="bar-song9"></div>
+            </div>
+            <div class="time-display" id="time-song9">0:00 / 0:00</div>
+          </div>
+
+          <!-- SONG 10 -->
+          <div class="song">
+            <img src="song10.jpg" alt="Song Cover" class="song-cover">
+            <div class="song-info">
+              <div class="title"> Aankhon Se Batana</div>
+              <div class="artist">The song that feels like us — where words aren’t needed, just a glance is enough to say it all</div>
+            </div>
+            <div class="play-btn" onclick="playSong('song10')" id="btn-song10">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+          <div class="progress-container hidden" id="progress-song10">
+            <div class="progress-bar" onclick="seek(event, 'song10')">
+              <div class="progress" id="bar-song10"></div>
+            </div>
+            <div class="time-display" id="time-song10">0:00 / 0:00</div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-button-container">
+      <button onclick="location.href='message.html'" class="back-btn">Back to Birthday Message</button>
+    </div>
+  </div>
+
+  <!-- Audio Files -->
+  <audio id="song1" src="Naina_Rahul_Mishra.mp3"></audio>
+  <audio id="song2" src="Chaand_Baaliyan.mp3"></audio>
+  <audio id="song3" src="Tumse_Mohabbat_Hai.mpeg"></audio>
+  <audio id="song4" src="Pal.mp3"></audio>
+  <audio id="song5" src="Mast_Magan.mp3"></audio>
+  <audio id="song6" src="Baatein_Karo.mp3"></audio>
+  <audio id="song7" src="Yahin_Hoon_Main.mp3"></audio>
+  <audio id="song8" src="Pehli_Dafa.mp3"></audio>
+  <audio id="song9" src="Darmiyaan.mp3"></audio>
+  <audio id="song10" src="Aankhon_Se_Batana.mp3"></audio>
+
+  <script src="finalsurprise.js"></script>
+</body>
+</html>

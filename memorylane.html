@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Memory Lane</title>
+  <link rel="stylesheet" href="memorylane.css">
+</head>
+<body>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="balloon-box-wrapper">
+    <img src="balloon.png" class="balloon left-balloon" />
+    <img src="balloon.png" class="balloon center-balloon" />
+    <img src="balloon.png" class="balloon right-balloon" />
+
+    <div class="floating-box">
+      <h1>Our Memory Lane</h1>
+      <p>Take a stroll down memory lane with our most unforgettable moments!✨💫 <br>
+        Click over each photo to uncover the magic behind every memory and why it holds a special place in my heart! 💖📸</p>
+    </div>
+  </div>
+
+  <div class="memory-lane">
+  <div class="memory-photo" onclick="revealPhoto(this)">
+    <img src="ghibli1.png" data-original="photo1.jpg" alt="Memory 1">
+    <div class="memory-caption">
+      A seat for two, the lights went dim,<br>
+      Our hearts beat fast on a spontaneous whim.<br>
+      A glance, a laugh, your hand near mine—<br>
+      The start of us, a moment divine. 💖🎬
+    </div>
+  </div>
+  <div class="memory-photo" onclick="revealPhoto(this)">
+    <img src="ghibli2.png" data-original="photo2.png" alt="Memory 2">
+    <div class="memory-caption">
+      With winds so free and skies so wide,<br>
+      We chased the waves, no plans to guide.<br>
+      A sudden spark, a sweet escape—<br>
+      A memory made in ocean's shape. 🌊❤️
+    </div>
+  </div>
+  <div class="memory-photo" onclick="revealPhoto(this)">
+    <img src="ghibli3.png" data-original="photo3.jpg" alt="Memory 3">
+    <div class="memory-caption">
+      In the glow of Bollywood’s light,<br>
+      You and I—just felt so right.<br>
+      A stolen frame, a perfect show,<br>
+      Our favorite photo, love in flow. ❤️🖼️
+</div>
+
+  </div>
+  <div class="memory-photo" onclick="revealPhoto(this)">
+    <img src="ghibli4.png" data-original="photo4.jpg" alt="Memory 4">
+    <div class="memory-caption">
+      Hand in hand, with skies aglow,<br>
+      Through whispering trees, we gently go.<br>
+      No rush, no race—just hearts in sync,<br>
+      A sunset walk, our favorite link. 🌅🤝
+</div>
+
+  </div>
+  <div class="memory-photo" onclick="revealPhoto(this)">
+    <img src="ghibli5.png" data-original="photo5.jpg" alt="Memory 5">
+    <div class="memory-caption">
+      Frosting smiles and playful cheer,<br>
+      Another surprise, with you so near.<br>
+      Messy faces, hearts so bright,<br>
+      A birthday filled with pure delight. 🥳🎈
+</div>
+
+  </div>
+  <div class="memory-photo" onclick="revealPhoto(this)">
+    <img src="ghibli6.png" data-original="photo6.jpg" alt="Memory 6">
+    <div class="memory-caption">
+      Your smile’s a spark, so pure, so bright,<br>
+      It turns my world from dark to light.<br>
+      A moment so sweet, I’ll always keep,<br>
+      That cutest smile, it runs so deep. 🥰🌈
+</div>
+
+  </div>
+</div>
+
+
+<!-- Navigation buttons -->
+<div class="nav-buttons">
+    <button onclick="location.href='cake.html'" class="nav-button left">🎂 Back to Birthday Cake</button>
+    <button onclick="location.href='message.html'" class="nav-button right">Next Surprise 🎁</button>
+  </div>
+
+ <script src="memorylane.js"></script>
+
+</body>
+</html>

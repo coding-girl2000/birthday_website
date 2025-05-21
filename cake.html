@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cake Surprise</title>
+  <link rel="stylesheet" href="cake.css">
+</head>
+<body>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="cake-container">
+    <img src="cake.png" alt="Cake" class="cake-img" />
+
+    <div class="candles">
+      <div class="candle-wrapper">
+        <img src="candle.png" class="candle" alt="Candle" />
+        <img src="flame.png" class="flame" alt="Flame" onclick="blowFlame(this)" />
+      </div>
+      <div class="candle-wrapper">
+        <img src="candle.png" class="candle" alt="Candle" />
+        <img src="flame.png" class="flame" alt="Flame" onclick="blowFlame(this)" />
+      </div>
+      <div class="candle-wrapper">
+        <img src="candle.png" class="candle" alt="Candle" />
+        <img src="flame.png" class="flame" alt="Flame" onclick="blowFlame(this)" />
+      </div>
+      <div class="candle-wrapper">
+        <img src="candle.png" class="candle" alt="Candle" />
+        <img src="flame.png" class="flame" alt="Flame" onclick="blowFlame(this)" />
+      </div>
+      <div class="candle-wrapper">
+        <img src="candle.png" class="candle" alt="Candle" />
+        <img src="flame.png" class="flame" alt="Flame" onclick="blowFlame(this)" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Message below cake -->
+  <div id="blow-msg">Blow out all the candles 🎂</div>
+
+  <!-- Hidden birthday message box -->
+  <div id="message-box" class="hidden">
+    <h2>✨ Happy Birthday, my love ✨</h2>
+    <p>Close your eyes, make a wish, and let the universe do the rest. 💖</p>
+    <button onclick="goToNext()">Next Surprise 💝</button>
+  </div>
+
+  <script src="cake.js"></script>
+</body>
+</html>

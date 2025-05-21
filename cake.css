@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive;
+    background-color: #ffe0ec;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  #confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .cake-container {
+    position: relative;
+    margin-top: 80px;
+    display: inline-block;
+  }
+  
+  .cake-img {
+    width: 300px;
+    height: auto;
+  }
+  
+  .candles {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .candle-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .candle {
+    width: 25px;
+    height: 80px;
+  }
+  
+  .flame {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -20px;
+    left: 2px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #message-box {
+    margin-top: 40px;
+    background: white;
+    padding: 30px;
+    width: 320px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1s ease-in;
+    text-align: center;
+  }
+  
+  #message-box button {
+    padding: 10px 25px;
+    border: none;
+    background: #ff3366;
+    color: white;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  #blow-msg {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #ff3366;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
