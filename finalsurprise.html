@@ -214,8 +214,21 @@
     <!-- Back Button -->
     <div class="back-button-container">
       <button onclick="location.href='message.html'" class="back-btn">Back to Birthday Message</button>
+   
+    <!-- Crazy Part Button -->
+      <button onclick="showVideo()" class="crazy-btn">Click for something Crazy😆 </button>
+    
     </div>
-  </div>
+
+      <!-- Video Overlay -->
+      <div class="video-overlay hidden" id="videoOverlay">
+      <div class="video-container">
+        <span class="close-btn" onclick="closeVideo()">×</span>
+        <video id="crazyVideo" controls>
+          <source src="crazy_surprise.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
 
   <!-- Audio Files -->
   <audio id="song1" src="Naina_Rahul_Mishra.mp3"></audio>

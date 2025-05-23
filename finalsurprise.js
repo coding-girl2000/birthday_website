@@ -1,5 +1,3 @@
-
-
 (() => {
   let currentAudio = null;
   let currentProgressId = null;
@@ -12,7 +10,6 @@
   window.playSong = function (id) {
     const audio = document.getElementById(id);
 
-    // If same audio is clicked, toggle pause/play
     if (currentAudio && currentAudio === audio) {
       const icon = document.querySelector(`#btn-${id} .play-icon, #btn-${id} .pause-icon`);
       if (audio.paused) {
@@ -29,7 +26,6 @@
       return;
     }
 
-    // Stop previous audio & reset all buttons
     allAudios.forEach(audioId => {
       const a = document.getElementById(audioId);
       a.pause();
@@ -42,7 +38,6 @@
       document.getElementById(`progress-${audioId}`).classList.add('hidden');
     });
 
-    // Set current
     currentAudio = audio;
     currentProgressId = `progress-${id}`;
     currentBarId = `bar-${id}`;
@@ -52,7 +47,6 @@
     audio.play();
     startProgressUpdates(id);
 
-    // Switch icon to pause
     const icon = document.querySelector(`#btn-${id} .play-icon`);
     if (icon) {
       icon.classList.remove('play-icon');
@@ -76,7 +70,6 @@
         document.getElementById(currentProgressId).classList.add('hidden');
         stopProgressUpdates();
 
-        // Reset play icon
         const icon = document.querySelector(`#btn-${id} .pause-icon`);
         if (icon) {
           icon.classList.remove('pause-icon');
@@ -143,4 +136,20 @@
   }
 
   setInterval(drawParticles, 30);
+
+  // ===== VIDEO POPUP FEATURE =====
+  window.showVideo = function () {
+    const overlay = document.getElementById('videoOverlay');
+    const video = document.getElementById('crazyVideo');
+    overlay.classList.remove('hidden');
+    video.play();
+  };
+
+  window.closeVideo = function () {
+    const overlay = document.getElementById('videoOverlay');
+    const video = document.getElementById('crazyVideo');
+    video.pause();
+    video.currentTime = 0;
+    overlay.classList.add('hidden');
+  };
 })();
