@@ -139,11 +139,23 @@
 
   // ===== VIDEO POPUP FEATURE =====
   window.showVideo = function () {
-    const overlay = document.getElementById('videoOverlay');
-    const video = document.getElementById('crazyVideo');
-    overlay.classList.remove('hidden');
-    video.play();
-  };
+  // Pause the currently playing audio (if any)
+  if (currentAudio && !currentAudio.paused) {
+    currentAudio.pause();
+    const icon = document.querySelector(`#btn-${currentAudio.id} .pause-icon`);
+    if (icon) {
+      icon.classList.remove('pause-icon');
+      icon.classList.add('play-icon');
+    }
+  }
+
+  // Show the video overlay and play the video
+  const overlay = document.getElementById('videoOverlay');
+  const video = document.getElementById('crazyVideo');
+  overlay.classList.remove('hidden');
+  video.play();
+};
+
 
   window.closeVideo = function () {
     const overlay = document.getElementById('videoOverlay');
