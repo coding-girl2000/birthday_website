@@ -8,10 +8,8 @@ I still remember that day, 'Cho toke sunset dekhabo', that train journey. That m
 
 You have this way of making even the worst days feel okay — with just a look, a laugh, or that ridiculous joke you know I pretend to hate but secretly love. You are strong, kind, endlessly patient, and effortlessly funny. I hope you know how rare you are.
 
-There’s something about waking up knowing you’re mine that makes everything feel right. You’re not just someone I love — you’re the home I never knew I was missing.
-
 And here’s something I don’t always say out loud:
-I admire you. The way you show up for the people you love. The way you chase what you believe in. The way you’ve let me in, even when it wasn’t easy. I notice it all, and I love you more because of it.
+I admire you. The way you show up for the people you love. The way you chase what you believe in. The way you’ve let me in, even when it wasn’t easy. I notice it all, and I love you more because of it. You’re not just someone I love — you’re the home I never knew I was missing.
 
 So on your birthday, I want to celebrate everything that makes you, you.
 Not just the laughs and the kisses and the comfort — but the beautiful, messy, complicated, magical you.
@@ -22,7 +20,7 @@ Let’s keep building this life together — full of late-night talks, quiet mor
 I love you more than words can hold.
 Happy Birthday, Mr. Rik Halder.
 
-Yours, completely.
+Yours, truly and completely.
 Neku ❤️`;
 
 const messageElement = document.getElementById("typed-message");

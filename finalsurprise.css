@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  flex-wrap: wrap; /* Add this */
+  flex-wrap: wrap; 
   flex-direction: row;
   justify-content: center;
 }
@@ -111,7 +111,6 @@ body {
   color: #666;
 }
 
-/* Play Button Circle Container */
 .play-btn {
   width: 40px;
   height: 40px;
@@ -130,7 +129,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Triangle Play Icon */
 .play-icon {
   width: 0;
   height: 0;
@@ -139,7 +137,6 @@ body {
   border-bottom: 8px solid transparent;
 }
 
-/* Pause Icon: Two vertical bars */
 .pause-icon {
   width: 12px;
   height: 16px;

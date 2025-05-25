@@ -34,8 +34,8 @@ body {
   padding: 30px;
   border-radius: 20px;
   width: 90%;
-  max-width: 800px; /* wider than before */
-  height: 400px; /* fixed height to enable scrolling */
+  max-width: 800px; 
+  height: 400px;
   margin: 20px auto;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   font-size: 1.1em;

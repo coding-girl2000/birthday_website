@@ -56,5 +56,5 @@ function blowFlame(flame) {
   
 
 function goToNext() {
-  window.location.href = "memorylane.html"; // Replace with your next page
+  window.location.href = "memorylane.html"; 
 }
