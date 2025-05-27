@@ -206,6 +206,42 @@
             <div class="time-display" id="time-song10">0:00 / 0:00</div>
           </div>
 
+          <!-- SONG 11 -->
+          <div class="song">
+            <img src="song11.jpg" alt="Song Cover" class="song-cover">
+            <div class="song-info">
+              <div class="title"> Yaaram</div>
+              <div class="artist">The song that says “I’ll be there for you” — not just in love, but in life’s every little moment</div>
+            </div>
+            <div class="play-btn" onclick="playSong('song11')" id="btn-song11">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+          <div class="progress-container hidden" id="progress-song11">
+            <div class="progress-bar" onclick="seek(event, 'song11')">
+              <div class="progress" id="bar-song11"></div>
+            </div>
+            <div class="time-display" id="time-song11">0:00 / 0:00</div>
+          </div>
+
+          <!-- SONG 12 -->
+          <div class="song">
+            <img src="song12.jpg" alt="Song Cover" class="song-cover">
+            <div class="song-info">
+              <div class="title"> Tum Ho</div>
+              <div class="artist">The song that whispers what words can’t — that you’re not just beside me, you’re a part of me. In every quiet moment, it’s always you</div>
+            </div>
+            <div class="play-btn" onclick="playSong('song12')" id="btn-song12">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+          <div class="progress-container hidden" id="progress-song12">
+            <div class="progress-bar" onclick="seek(event, 'song12')">
+              <div class="progress" id="bar-song12"></div>
+            </div>
+            <div class="time-display" id="time-song12">0:00 / 0:00</div>
+          </div>
+
 
         </div>
       </div>
@@ -241,6 +277,8 @@
   <audio id="song8" src="Pehli_Dafa.mp3"></audio>
   <audio id="song9" src="Darmiyaan.mp3"></audio>
   <audio id="song10" src="Aankhon_Se_Batana.mp3"></audio>
+  <audio id="song11" src="Yaaram.mp3"></audio>
+  <audio id="song12" src="Tum_Ho.mp3"></audio>
 
   <script src="finalsurprise.js"></script>
 </body>
