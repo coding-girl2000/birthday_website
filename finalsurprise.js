@@ -5,7 +5,18 @@
   let currentTimeId = null;
   let updateInterval = null;
 
-  const allAudios = ['song1', 'song2', 'song3', 'song4','song5', 'song6','song7','song8','song9','song10','song11', 'song12'];
+  const allAudios = ['song1', 'song2', 'song3', 'song4', 'song5', 'song6', 'song7', 'song8', 'song9', 'song10', 'song11', 'song12'];
+
+  // Auto-play next song on end
+  allAudios.forEach((id, index) => {
+    const audio = document.getElementById(id);
+    audio.addEventListener('ended', () => {
+      const nextIndex = index + 1;
+      if (nextIndex < allAudios.length) {
+        playSong(allAudios[nextIndex]);
+      }
+    });
+  });
 
   window.playSong = function (id) {
     const audio = document.getElementById(id);
@@ -137,26 +148,24 @@
 
   setInterval(drawParticles, 30);
 
-
   // ===== VIDEO POPUP FEATURE =====
   window.showVideo = function () {
-  // Pause the currently playing audio (if any)
-  if (currentAudio && !currentAudio.paused) {
-    currentAudio.pause();
-    const icon = document.querySelector(`#btn-${currentAudio.id} .pause-icon`);
-    if (icon) {
-      icon.classList.remove('pause-icon');
-      icon.classList.add('play-icon');
+    // Pause the currently playing audio (if any)
+    if (currentAudio && !currentAudio.paused) {
+      currentAudio.pause();
+      const icon = document.querySelector(`#btn-${currentAudio.id} .pause-icon`);
+      if (icon) {
+        icon.classList.remove('pause-icon');
+        icon.classList.add('play-icon');
+      }
     }
-  }
 
-  // Show the video overlay and play the video
-  const overlay = document.getElementById('videoOverlay');
-  const video = document.getElementById('crazyVideo');
-  overlay.classList.remove('hidden');
-  video.play();
-};
-
+    // Show the video overlay and play the video
+    const overlay = document.getElementById('videoOverlay');
+    const video = document.getElementById('crazyVideo');
+    overlay.classList.remove('hidden');
+    video.play();
+  };
 
   window.closeVideo = function () {
     const overlay = document.getElementById('videoOverlay');
