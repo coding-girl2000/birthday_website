@@ -43,3 +43,12 @@ function startSurprise() {
     localStorage.setItem("playSong", "true");
   }
   
+  const video = document.getElementById("birthday-video");
+
+document.querySelector(".video-wrapper").addEventListener("mouseenter", () => {
+  video.setAttribute("controls", "controls");
+});
+
+document.querySelector(".video-wrapper").addEventListener("mouseleave", () => {
+  video.removeAttribute("controls");
+});

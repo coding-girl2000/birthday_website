@@ -1,69 +1,95 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #ffe0ec;
-    font-family: 'Comic Sans MS', cursive;
-    overflow: hidden;
-  }
-  
-  .container {
-    text-align: center;
-    padding: 100px 20px;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 20px;
-    max-width: 500px;
-    margin: 100px auto;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  }
-  
-  h1 {
-    font-size: 2.5em;
-    color: #d0006f;
-    text-shadow: 1px 1px 3px white;
-  }
-  
-  button {
-    padding: 15px 30px;
-    font-size: 1.2em;
-    background: linear-gradient(90deg, #ff00aa, #8000ff);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  button:hover {
-    transform: scale(1.1);
-  }
-  
-  #confetti-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-  }
+  margin: 0;
+  padding: 0;
+  background-color: #ffe0ec;
+  font-family: 'Comic Sans MS', cursive;
+  overflow: hidden;
+}
 
-  .play-song-btn {
-    padding: 8px 18px;
-    font-size: 0.9em;
-    border-radius: 20px;
-    background-color: #9400d3;
-    color: white;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: background 0.3s ease;
-  }
-  
-  .play-song-btn:hover {
-    background-color: #7a00b3;
-  }
-  
-  @media (max-width: 768px) {
+.container {
+  position: relative; 
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 40px 20px;
+  margin: 60px auto;
+  width: fit-content;
+  max-width: 90%;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+
+h1 {
+  font-size: 2.5em;
+  color: #d0006f;
+  text-shadow: 1px 1px 3px white;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.birthday-video {
+  width: 90%;
+  max-width: 500px;
+  max-height: 300px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
+
+button {
+  display: block;
+  margin: 20px auto 0 auto; /* Center it below the video */
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background: linear-gradient(90deg, #ff00aa, #8000ff);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Push behind everything */
+}
+
+
+.play-song-btn {
+  padding: 8px 18px;
+  font-size: 0.9em;
+  border-radius: 20px;
+  background-color: #9400d3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.play-song-btn:hover {
+  background-color: #7a00b3;
+}
+
+@media (max-width: 768px) {
   .container, .floating-box, .message-box, .surprise-box {
     flex-direction: column !important;
     padding: 20px;
